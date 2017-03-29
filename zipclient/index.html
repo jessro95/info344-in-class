@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zips</title>
+</head>
+<body>
+    <p>Open your console!</p>
+    <script>
+        fetch("http://localhost:8000/zips/city/seattle")
+            .then(function(resp){
+                return resp.json()
+            })
+            .then(function(data){
+                console.log(data)
+            })
+            .catch(function(err){
+                console.error(err)
+            })
+    </script>
+</body>
+</html>
+
+<!--
+<html>
+<head>
+    <title>City ZipCodes</title>
+</head>
+
+<body>
+
+<form>
+    City Name:<br>
+    <input type = "text" name = "cityName"><br>
+    <input type="submit" value = "Submit">
+</form>
+<span></span>
+</body>
+
+
+<script>
+$("form").submit(function(){
+
+})
+    fetch("http://localhost:8000/zips/city/seattle")
+        .then(function(resp){
+            return resp.json()
+        })
+        .then(function(data){
+            console.log(data)
+        })
+        .catch(function(err){
+            console.error(err)
+        })
+
+</script>
+</html>
+-->
