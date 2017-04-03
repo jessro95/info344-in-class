@@ -52,7 +52,7 @@ func main() {
 		log.Fatal("please set ADDR environment var")
 	}
 
-	f, err := os.Open("../data/zips.json")
+	f, err := os.Open("./zips.csv")
 	if err != nil {
 		log.Fatal("error opening zips file: " + err.Error())
 	}
